@@ -20,17 +20,14 @@ class HitungActivity : AppCompatActivity() {
             if (stringPanjang.equals("")){
                 isEmptyField = true
                 editPanjang.error="Data Kosong"
-
             }
             if (stringLebar.isEmpty()){
                 isEmptyField = true
                 editLebar.error="Data Kosong"
-
             }
             if (stringTinggi.equals("")){
                 isEmptyField = true
                 editTinggi.error="Data Kosong"
-
             }
             if (!isEmptyField) {
 
@@ -40,8 +37,7 @@ class HitungActivity : AppCompatActivity() {
 
                 textHasil.text = (panjang * lebar * tinggi).toString()
             }
-
-
+            
         }
     }
 }

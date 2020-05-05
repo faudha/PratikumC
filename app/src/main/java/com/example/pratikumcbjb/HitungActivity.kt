@@ -11,11 +11,35 @@ class HitungActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hitung)
 
         buttonHitung.setOnClickListener {
-            val panjang=editPanjang.text.toString().trim().toFloat()
-            val lebar=editLebar.text.toString().trim().toFloat()
-            val tinggi=editTinggi.text.toString().trim().toFloat()
+            var isEmptyField = false
 
-            textHasil.text=(panjang * lebar * tinggi).toString()
+            val stringPanjang = editPanjang.text.toString().trim()
+            val stringLebar = editPanjang.text.toString().trim()
+            val stringTinggi = editPanjang.text.toString().trim()
+
+            if (stringPanjang.equals("")){
+                isEmptyField = true
+                editPanjang.error="Data Kosong"
+
+            }
+            if (stringLebar.isEmpty()){
+                isEmptyField = true
+                editLebar.error="Data Kosong"
+
+            }
+            if (stringTinggi.equals("")){
+                isEmptyField = true
+                editTinggi.error="Data Kosong"
+
+            }
+            if (!isEmptyField) {
+
+                val panjang = stringPanjang.toFloat()
+                val lebar = stringLebar.toFloat()
+                val tinggi = stringTinggi.toFloat()
+
+                textHasil.text = (panjang * lebar * tinggi).toString()
+            }
 
 
         }

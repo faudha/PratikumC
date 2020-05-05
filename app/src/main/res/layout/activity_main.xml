@@ -23,7 +23,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="476dp"
         android:layout_marginEnd="12dp"
-        android:text="@string/button"
+        android:text="Activity Hitung"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

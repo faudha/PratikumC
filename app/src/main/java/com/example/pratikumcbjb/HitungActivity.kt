@@ -14,8 +14,8 @@ class HitungActivity : AppCompatActivity() {
             var isEmptyField = false
 
             val stringPanjang = editPanjang.text.toString().trim()
-            val stringLebar = editPanjang.text.toString().trim()
-            val stringTinggi = editPanjang.text.toString().trim()
+            val stringLebar = editLebar.text.toString().trim()
+            val stringTinggi = editTinggi.text.toString().trim()
 
             if (stringPanjang.equals("")){
                 isEmptyField = true

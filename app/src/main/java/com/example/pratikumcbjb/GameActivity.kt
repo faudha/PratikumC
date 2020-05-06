@@ -61,7 +61,7 @@ class GameActivity : AppCompatActivity() {
         return Random().nextInt(3)+1
     }
 
-    fun suwit(pilihanPlayer:Int,pilihanKomputer:Int): TextView? {
+    fun suwit(pilihanPlayer:Int,pilihanKomputer:Int): String {
         var hasil : String = ""
         if (pilihanPlayer == pilihanKomputer){
             hasil = "SERI"

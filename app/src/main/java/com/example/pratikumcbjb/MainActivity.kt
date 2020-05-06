@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Hai", Toast.LENGTH_SHORT).show()
         })
         button1.setOnClickListener {
-            val intent = Intent(This@MainActivity,HitungActivity::class.java)
+            val intent = Intent(this@MainActivity, HitungActivity::class.java)
             startActivity(intent)
         }
         button2.setOnClickListener {
-            val intent = Intent(This@MainActivity,GameActivity::class.java)
+            val intent = Intent(this@MainActivity, GameActivity::class.java)
             startActivity(intent)
         }
 

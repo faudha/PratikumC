@@ -28,7 +28,7 @@ class GameActivity : AppCompatActivity() {
             pilihanKomputer=getPilihanKomputer()
             textKomputer.text = ""
             Handler().postDelayed({
-            textHasil = suwit(pilihanPlayer,pilihanKomputer)
+            textHasil.text = suwit(pilihanPlayer,pilihanKomputer)
             showPilihanKomputer(pilihanKomputer)
             },2000)
         }
@@ -39,7 +39,7 @@ class GameActivity : AppCompatActivity() {
             pilihanKomputer=getPilihanKomputer()
             textKomputer.text = ""
             Handler().postDelayed({
-            textHasil = suwit(pilihanPlayer,pilihanKomputer)
+            textHasil.text = suwit(pilihanPlayer,pilihanKomputer)
             showPilihanKomputer(pilihanKomputer)
             },2000)
         }
@@ -50,7 +50,7 @@ class GameActivity : AppCompatActivity() {
             pilihanKomputer=getPilihanKomputer()
                 textKomputer.text = ""
                 Handler().postDelayed({
-            textHasil = suwit(pilihanPlayer,pilihanKomputer)
+            textHasil.text = suwit(pilihanPlayer,pilihanKomputer)
             showPilihanKomputer(pilihanKomputer)
                 },2000)
         }

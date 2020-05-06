@@ -37,7 +37,7 @@ class HitungActivity : AppCompatActivity() {
 
                 textHasil.text = (panjang * lebar * tinggi).toString()
             }
-            
+
         }
     }
 }

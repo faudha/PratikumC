@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val textView1=findViewById<TextView>(R.id.textview1)
         val button1=findViewById<Button>(R.id.button1)
+        val button2=findViewById<Button>(R.id.button2)
 
 
         textView1.setOnClickListener({
@@ -24,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         })
         button1.setOnClickListener {
             val intent = Intent(This@MainActivity,HitungActivity::class.java)
+            startActivity(intent)
+        }
+        button2.setOnClickListener {
+            val intent = Intent(This@MainActivity,GameActivity::class.java)
             startActivity(intent)
         }
 

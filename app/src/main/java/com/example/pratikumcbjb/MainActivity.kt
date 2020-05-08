@@ -33,5 +33,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btSecondActivity.setOnClickListener {
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
+            intent.putExtra("nama", "NAMA : FAUDHA NUR SIDIQ M.")
+            intent.putExtra("npm", "NPM. 19630347")
+            intent.putExtra("kelas", "KELAS. C Non Reg Banjarbaru")
+            startActivity(intent)
+        }
+
     }
 }

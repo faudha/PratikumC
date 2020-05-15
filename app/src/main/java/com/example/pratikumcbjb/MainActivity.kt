@@ -7,6 +7,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import android.app.AlertDialog
+import android.app.Dialog
+import android.widget.EditText
 import android.widget.Toast.makeText as toastMakeText
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -29,8 +32,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         button2.setOnClickListener {
-            val intent = Intent(this@MainActivity, GameActivity::class.java)
-            startActivity(intent)
+            var alert : AlertDialog.Builder = AlertDialog.Builder(this)
+            val editUser = EditText(this)
+            alert.setTitle("Username")
+            alert.setMessage("HAI...")
+            alert.setView(editUser)
+
+           alert.setPositiveButton("YES"){dialog, which ->
+
+               var username = editUser.text.toString()
+               val intent = Intent(this@MainActivity, GameActivity::class.java)
+               intent.putExtra(GameActivity.EXTRA_USER,username)
+               startActivity(intent)
+           }
+            alert.setNegativeButton("No"){dialog, which ->  
+
+            }
+
+            alert.show()
         }
 
         btSecondActivity.setOnClickListener {

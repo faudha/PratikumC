@@ -15,15 +15,24 @@ private const val KERTAS = 3
 
 class GameActivity : AppCompatActivity() {
 
+    companion object{
+         const val EXTRA_USER = "username"
+    }
+
+
+
+    var username : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+        username = intent.getStringExtra(getString(EXTRA_USER))
 
         var pilihanKomputer : Int
         var pilihanPlayer:Int
 
         buttonBatu.setOnClickListener {
-            textPlayer.text = "BATU"
+            textPlayer.text = getString(R.string.BATU)
             pilihanPlayer= BATU
             pilihanKomputer=getPilihanKomputer()
             textKomputer.text = ""
@@ -34,7 +43,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         buttonGunting.setOnClickListener {
-            textPlayer.text = "GUNTING"
+            textPlayer.text = getString(R.string.GUNTING)
             pilihanPlayer= GUNTING
             pilihanKomputer=getPilihanKomputer()
             textKomputer.text = ""
@@ -45,7 +54,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         buttonKertas.setOnClickListener {
-            textPlayer.text = "KERTAS"
+            textPlayer.text = getString(R.string.KERTAS)
             pilihanPlayer= KERTAS
             pilihanKomputer=getPilihanKomputer()
                 textKomputer.text = ""
@@ -70,10 +79,10 @@ class GameActivity : AppCompatActivity() {
         else if ((pilihanPlayer == BATU && pilihanKomputer == KERTAS)||
             (pilihanPlayer == GUNTING && pilihanKomputer == BATU)||
             (pilihanPlayer == KERTAS && pilihanKomputer == GUNTING)){
-            hasil = "KAMU KALAH"
+            hasil = username + " KALAH"
             textHasil.setTextColor(Color.RED)}
         else {
-            hasil = "KAMU MENANG"
+            hasil = username + " MENANG"
             textHasil.setTextColor(Color.GREEN)
         }
 

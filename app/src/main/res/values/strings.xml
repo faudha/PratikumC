@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">PratikumCBjb</string>
     <string name="button">Button</string>
+    <string name="GUNTING">GUNTING</string>
+    <string name="BATU">BATU</string>
+    <string name="KERTAS">KERTAS</string>
+    <string name="panjang">Panjang</string>
+    <string name="tinggi">Tinggi</string>
+    <string name="lebar">Lebar</string>
+    <string name="batu">Batu</string>
+    <string name="gunting">Gunting</string>
+    <string name="kertas">Kertas</string>
+    <string name="username">username</string>
 </resources>

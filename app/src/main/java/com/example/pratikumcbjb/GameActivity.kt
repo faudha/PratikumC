@@ -26,7 +26,7 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
-        username = intent.getStringExtra(getString(EXTRA_USER))
+        username = intent.getStringExtra(EXTRA_USER)
 
         var pilihanKomputer : Int
         var pilihanPlayer:Int
